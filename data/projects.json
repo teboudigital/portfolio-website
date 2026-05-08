@@ -1,4 +1,4 @@
-{
+﻿{
     "projects":  [
                      {
                          "_comment":  "FIRST PROJECT: PIZZAMAMA DJANGO",
@@ -145,7 +145,7 @@
                          "links":  {
                                        "github":  "https://github.com/FabriceGhislain7/titanic-streamlit-dashboard",
                                        "documentation":  "#",
-                                       "live":  "https://titanic-streamlit-dashboard.onrender.com/"
+                                       "live":  "https://applied-ml-portfolio.onrender.com/titanic"
                                    },
                          "date_created":  "2025-07-15",
                          "date_updated":  "2026-03-30",
@@ -215,7 +215,7 @@
                                       ],
                          "links":  {
                                        "github":  "https://github.com/FabriceGhislain7/ml-air-quality",
-                                       "live":  "https://ml-air-quality-dashboard.onrender.com",
+                                       "live":  "https://applied-ml-portfolio.onrender.com/air-quality",
                                        "documentation":  "https://github.com/FabriceGhislain7/ml-air-quality/tree/main/docs"
                                    },
                          "date_created":  "2026-04-13",
