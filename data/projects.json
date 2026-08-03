@@ -31,7 +31,7 @@
                                           "Centralized router and scalable API structure"
                                       ],
                          "links":  {
-                                       "github":  "https://github.com/FabriceGhislain7/pizzamama-market",
+                                       "github":  "https://github.com/teboudigital/pizzamama-market",
                                        "live":  "https://pizzamama-market-backend.onrender.com/api/v1/docs/",
                                        "demo":  "https://pizzamama-market-backend.onrender.com/api/v1/"
                                    },
@@ -143,7 +143,7 @@
                                           "Model interpretation and performance evaluation"
                                       ],
                          "links":  {
-                                       "github":  "https://github.com/FabriceGhislain7/titanic-streamlit-dashboard",
+                                       "github":  "https://github.com/teboudigital/titanic-streamlit-dashboard",
                                        "documentation":  "#",
                                        "live":  "https://applied-ml-portfolio.onrender.com/titanic"
                                    },
@@ -214,9 +214,9 @@
                                           "Sphinx-ready technical documentation and automated pytest coverage"
                                       ],
                          "links":  {
-                                       "github":  "https://github.com/FabriceGhislain7/ml-air-quality",
+                                       "github":  "https://github.com/teboudigital/ml-air-quality",
                                        "live":  "https://applied-ml-portfolio.onrender.com/air-quality",
-                                       "documentation":  "https://github.com/FabriceGhislain7/ml-air-quality/tree/main/docs"
+                                       "documentation":  "https://github.com/teboudigital/ml-air-quality/tree/main/docs"
                                    },
                          "date_created":  "2026-04-13",
                          "date_updated":  "2026-04-21",
@@ -319,7 +319,7 @@
                                           "Responsive web interface with Bootstrap 5"
                                       ],
                          "links":  {
-                                       "github":  "https://github.com/FabriceGhislain7/gdr-web-app",
+                                       "github":  "https://github.com/teboudigital/gdr-web-app",
                                        "live":  "https://gdr-web-app.onrender.com",
                                        "documentation":  "#"
                                    },
@@ -443,9 +443,9 @@
                                           "Complete technical documentation with API reference"
                                       ],
                          "links":  {
-                                       "github":  "https://github.com/FabriceGhislain7/kivy-game-galaxy",
+                                       "github":  "https://github.com/teboudigital/kivy-game-galaxy",
                                        "live":  "coming-soon.html",
-                                       "documentation":  "https://github.com/FabriceGhislain7/kivy-game-galaxy/blob/main/API_REFERENCE.md#core-architecture"
+                                       "documentation":  "https://github.com/teboudigital/kivy-game-galaxy/blob/main/API_REFERENCE.md#core-architecture"
                                    },
                          "date_created":  "2025-02-03",
                          "date_updated":  "2025-08-10",
@@ -567,7 +567,7 @@
                                           "Complete technical documentation with API reference"
                                       ],
                          "links":  {
-                                       "github":  "https://github.com/FabriceGhislain7/kivy-mrbeat",
+                                       "github":  "https://github.com/teboudigital/kivy-mrbeat",
                                        "live":  "coming-soon.html",
                                        "documentation":  "https://github.com/yourusername/mrbeat-drum-machine/blob/main/README.md"
                                    },
@@ -661,58 +661,6 @@
                                       "Cross-platform"
                                   ],
                          "priority":  4
-                     },
-                     {
-                         "id":  "python-learning-journey",
-                         "title":  "Python Learning Journey",
-                         "description":  "Comprehensive collection of Python projects and exercises from the Udemy course, evolving from v1.0 to v12.0. Includes automation, web scraping, GUI applications, and API integration.",
-                         "image":  "assets/images/projects/python_scripts.jpg",
-                         "category":  "python",
-                         "status":  "ongoing",
-                         "featured":  false,
-                         "technologies":  [
-                                              "Python",
-                                              "Tkinter",
-                                              "Kivy",
-                                              "Requests",
-                                              "BeautifulSoup",
-                                              "Pandas"
-                                          ],
-                         "features":  [
-                                          "12+ progressive project versions",
-                                          "Automation of repetitive tasks",
-                                          "Web scraping applications",
-                                          "Desktop GUIs with Tkinter/Kivy",
-                                          "External API integration",
-                                          "Detailed documentation of the learning evolution"
-                                      ],
-                         "links":  {
-                                       "github":  "https://github.com/FabriceGhislain7/python-dev-portfolio",
-                                       "course":  "#"
-                                   },
-                         "date_created":  "2024-08-01",
-                         "date_updated":  "2025-01-24",
-                         "duration":  "6+ months",
-                         "team_size":  1,
-                         "role":  "Python Developer",
-                         "challenges":  [
-                                            "Maintaining consistency across versions",
-                                            "Documenting the learning process",
-                                            "Progressively implementing best practices"
-                                        ],
-                         "learnings":  [
-                                           "Python from beginner to intermediate level",
-                                           "Version control with Git",
-                                           "Clean code principles"
-                                       ],
-                         "tags":  [
-                                      "Python",
-                                      "Learning",
-                                      "Portfolio",
-                                      "Automation",
-                                      "GUI"
-                                  ],
-                         "priority":  5
                      }
                  ],
     "categories":  [
