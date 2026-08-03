@@ -5,6 +5,8 @@
 Modern, responsive portfolio showcasing my work in **software development**, **data-driven systems**, and **intelligent applications**.  
 This portfolio highlights production-oriented projects combining **backend engineering**, **analytics**, and **applied machine learning**.
 
+🔗 **Live:** [teboudigital.github.io/portfolio-website](https://teboudigital.github.io/portfolio-website/)
+
 ---
 
 ## Professional Profile
@@ -86,5 +88,5 @@ This portfolio reflects my role as a **Software Developer** working on **data-dr
 ## Contact
 
 📍 Genoa, Italy  
-📧 [ghislaintebou@gmail.com](mailto:ghislaintebou@gmail.com)  
+📧 [tebou.digital@gmail.com](mailto:tebou.digital@gmail.com)  
 🔗 GitHub & LinkedIn available via the portfolio
