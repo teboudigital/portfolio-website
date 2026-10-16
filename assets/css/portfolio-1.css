@@ -459,10 +459,43 @@ p {
   grid-column: 1 / -1;
   justify-self: center;
   margin-top: 6px;
+  animation: invite-pulse 2.6s ease-out infinite;
 }
 
 .role-more i {
-  transition: transform 0.2s ease;
+  animation: invite-nudge 2.6s ease-in-out infinite;
+}
+
+/* Soft accent ring that grows and fades, inviting a click */
+@keyframes invite-pulse {
+  0% { box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16), 0 0 0 0 color-mix(in srgb, var(--accent) 65%, transparent); }
+  70% { box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16), 0 0 0 14px rgba(0, 0, 0, 0); }
+  100% { box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16), 0 0 0 0 rgba(0, 0, 0, 0); }
+}
+
+/* Arrow nudges right twice, then rests */
+@keyframes invite-nudge {
+  0%, 40%, 100% { transform: translateX(0); }
+  10%, 30% { transform: translateX(5px); }
+  20% { transform: translateX(0); }
+}
+
+.role-more:hover,
+.role-more:focus-visible {
+  animation: none;
+}
+
+.role-more:hover i,
+.role-more:focus-visible i {
+  animation: none;
+  transform: translateX(5px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .role-more,
+  .role-more i {
+    animation: none;
+  }
 }
 
 .role-more:hover i {
