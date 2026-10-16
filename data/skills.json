@@ -1,6 +1,22 @@
 {
   "skills": [
     {
+      "id": "industrial-automation",
+      "name": "Industrial Automation",
+      "category": "automation",
+      "icon": "fas fa-industry",
+      "description": "Programmazione PLC, parametrizzazione inverter, HMI, collaudo e messa in servizio di impianti",
+      "tags": ["PLC", "Structured Text", "Schneider", "SoMove", "Vijeo Designer", "Commissioning"]
+    },
+    {
+      "id": "robotics",
+      "name": "Robotics & Industrial Software",
+      "category": "automation",
+      "icon": "fas fa-robot",
+      "description": "Celle robotizzate con robot Doosan e Fanuc, comunicazione OPC UA e software industriale in Python",
+      "tags": ["Doosan", "Fanuc", "OPC UA", "Python", "PySide6 (Qt)"]
+    },
+    {
       "id": "backend",
       "name": "Backend Development",
       "category": "development",
@@ -87,6 +103,11 @@
       "id": "all",
       "name": "Tutte le Competenze",
       "color": "#6b7280"
+    },
+    {
+      "id": "automation",
+      "name": "Automazione",
+      "color": "#ef4444"
     },
     {
       "id": "development",

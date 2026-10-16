@@ -1,7 +1,7 @@
 {
   "name": "Fabrice Ghislain Tebou - Portfolio",
   "short_name": "FG Portfolio",
-  "description": "Software Developer portfolio focused on backend, data-driven systems, and applied machine learning.",
+  "description": "Portfolio of an Automation Software Engineer and Python Developer: PLC, robotics, OPC UA and industrial software.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

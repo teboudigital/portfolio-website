@@ -2,18 +2,18 @@
   "personal_info": {
     "full_name": "Fabrice Ghislain Tebou",
     "display_name": "Fabrice Ghislain Tebou",
-    "title": "Full Stack Developer | AI/ML Enthusiast",
+    "title": "Automation Software Engineer | Python Developer",
     "tagline": "Codice elegante, soluzioni intelligenti",
     "location": {
-      "city": "Genova",
-      "region": "Liguria",
+      "city": "Piacenza",
+      "region": "Emilia-Romagna",
       "country": "Italia"
     }
   },
 
   "contact_info": {
     "email": "tebou.digital@gmail.com",
-    "phone": "+39 351 995 7025",
+    "phone": "+39 351 734 6623",
     "availability": {
       "status": "available",
       "for_work": true,
@@ -22,8 +22,8 @@
   },
 
   "professional_summary": {
-    "headline": "Full Stack Developer specializzato in AI/ML con passione per l'innovazione tecnologica",
-    "bio": "Full Stack Developer con formazione in Fisica Applicata e specializzazione in Machine Learning. Creo soluzioni innovative che combinano teoria scientifica e applicazioni pratiche, dall'analisi di dataset complessi allo sviluppo di applicazioni web full-stack.",
+    "headline": "Software Developer nell'automazione industriale: PLC, robotica e software industriale in Python",
+    "bio": "Software Developer nell'automazione industriale con formazione in Fisica Applicata. Programmo PLC in Structured Text su piattaforma Schneider, lavoro su celle robotizzate con robot Doosan e Fanuc (OPC UA) e sviluppo software industriale in Python con PySide6. Esperienza precedente in backend (Flask, Django, Delphi) e machine learning.",
     "mission": "Utilizzare la tecnologia per risolvere problemi reali attraverso soluzioni innovative e scalabili."
   },
 

@@ -11,12 +11,12 @@ window.PortfolioConfig = {
     /* ================================ */
     personal: {
         name: "Fabrice Ghislain Tebou",
-        title: "Python Developer | AI/ML Enthusiast", 
+        title: "Automation Software Engineer | Python Developer",
         email: "tebou.digital@gmail.com",
-        phone: "+39 351 995 7025",
-        location: "Genova, Italy",
+        phone: "+39 351 734 6623",
+        location: "Piacenza, Italy",
         github: "https://github.com/teboudigital",
-        linkedin: "#", // Da aggiornare quando disponibile
+        linkedin: "https://www.linkedin.com/in/fabrice-ghislain-tebou-72000b211/",
         website: "#"
     },
 
@@ -127,7 +127,7 @@ window.PortfolioConfig = {
             label: "GitHub Profile"
         },
         linkedin: {
-            url: "#",
+            url: "https://www.linkedin.com/in/fabrice-ghislain-tebou-72000b211/",
             icon: "fab fa-linkedin",
             label: "LinkedIn Profile"
         },
