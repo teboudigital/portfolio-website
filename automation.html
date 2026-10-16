@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Industrial Automation — Fabrice Ghislain Tebou</title>
+    <meta
+      name="description"
+      content="Industrial automation work of Fabrice Ghislain Tebou: PLC programming in Structured Text, robotic palletizing with Doosan, Fanuc robot integration over OPC UA, industrial software with Python and PySide6, plant commissioning."
+    />
+    <meta name="author" content="Fabrice Ghislain Tebou" />
+
+    <link
+      rel="icon"
+      href="assets/images/projects/small_logo.png"
+      type="image/png"
+    />
+    <meta name="theme-color" content="#0f2233" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,600&family=Public+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="assets/css/portfolio-1.css" />
+    <link rel="stylesheet" href="assets/css/automation.css" />
+  </head>
+  <body>
+    <!-- Header Navigation -->
+    <header class="site-header" id="header">
+      <div class="container header-inner">
+        <a href="index.html" class="brand" aria-label="Fabrice Ghislain Tebou, home">
+          <span class="brand-mark">FT</span>
+          <span class="brand-name">Fabrice Tebou</span>
+        </a>
+
+        <nav class="pill-nav" id="nav" aria-label="Page navigation">
+          <a href="#robotics">Robotics</a>
+          <a href="#plc">PLC</a>
+          <a href="#software">Software</a>
+          <a href="#commissioning">Commissioning</a>
+        </nav>
+
+        <a href="index.html#contact" class="btn btn-light header-cta">Contact me</a>
+
+        <button
+          class="menu-btn"
+          id="menu-btn"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="nav"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero with animated signal network and robot arm -->
+      <section class="auto-hero on-dark">
+        <canvas class="signal-canvas" id="signal-canvas" aria-hidden="true"></canvas>
+        <div class="grid-bg" style="background-color: transparent">
+          <div class="container auto-hero-inner">
+            <div>
+              <p class="breadcrumb">
+                <a href="index.html">Home</a><span>/</span><a href="index.html#experience">Experience</a><span>/</span>Automation
+              </p>
+              <p class="eyebrow">Provide Solution S.r.l. · Jul 2026 — Present</p>
+              <h1>Industrial automation.</h1>
+              <p class="hero-lead">
+                Where code meets machines: PLCs, robotic cells and the software
+                that connects them.
+              </p>
+              <p>
+                As a software developer in industrial automation I program PLC
+                systems in Structured Text on the Schneider platform, work on a
+                palletizing cell with a Doosan robotic arm, integrate Fanuc
+                robots over OPC UA and build industrial applications in Python
+                with PySide6. I take part in plant testing and commissioning with
+                the project team.
+              </p>
+              <div class="hero-actions">
+                <a href="#robotics" class="btn btn-light">
+                  Explore <i class="fa-solid fa-arrow-down"></i>
+                </a>
+                <a href="index.html#experience" class="btn btn-ghost">
+                  <i class="fa-solid fa-arrow-left"></i> Back to portfolio
+                </a>
+              </div>
+            </div>
+
+            <!-- Animated palletizing robot (illustration) -->
+            <figure class="robot-stage" style="margin: 0">
+              <svg viewBox="0 0 600 400" role="img" aria-labelledby="robot-title">
+                <title id="robot-title">
+                  Animated illustration of a robotic arm moving boxes from a
+                  conveyor to a pallet
+                </title>
+
+                <!-- Floor -->
+                <line x1="20" y1="340" x2="580" y2="340" stroke="rgba(255,255,255,0.25)" stroke-width="2" />
+
+                <!-- Conveyor -->
+                <rect x="30" y="286" width="210" height="14" rx="7" class="conveyor-belt" />
+                <line x1="40" y1="293" x2="230" y2="293" class="belt-line" />
+                <rect x="50" y="300" width="8" height="40" class="robot-shade" />
+                <rect x="212" y="300" width="8" height="40" class="robot-shade" />
+                <g class="conveyor-box">
+                  <rect x="125" y="250" width="50" height="36" rx="3" class="box" />
+                  <rect x="147" y="250" width="6" height="36" class="box-tape" />
+                </g>
+
+                <!-- Pallet with stacked boxes -->
+                <rect x="392" y="322" width="116" height="18" rx="2" fill="#8a6a45" />
+                <rect x="400" y="286" width="50" height="36" rx="3" class="box" />
+                <rect x="452" y="286" width="50" height="36" rx="3" class="box" />
+                <g class="placed-box">
+                  <rect x="425" y="250" width="50" height="36" rx="3" class="box" />
+                  <rect x="447" y="250" width="6" height="36" class="box-tape" />
+                </g>
+
+                <!-- Robot base -->
+                <rect x="258" y="300" width="84" height="40" rx="6" class="robot-shade" />
+                <rect x="280" y="276" width="40" height="28" rx="4" class="robot-body" />
+                <circle cx="330" cy="318" r="4" fill="#22c55e" class="status-led" />
+
+                <!-- Kinematic chain -->
+                <g class="arm-shoulder">
+                  <rect x="286" y="160" width="28" height="120" rx="14" class="robot-body" />
+                  <circle cx="300" cy="280" r="22" class="robot-shade" />
+                  <circle cx="300" cy="280" r="10" class="robot-joint" />
+
+                  <g class="arm-elbow">
+                    <rect x="300" y="148" width="130" height="24" rx="12" class="robot-body" />
+                    <circle cx="300" cy="160" r="18" class="robot-shade" />
+                    <circle cx="300" cy="160" r="8" class="robot-joint" />
+
+                    <g class="arm-wrist">
+                      <circle cx="430" cy="160" r="12" class="robot-shade" />
+                      <rect x="424" y="166" width="12" height="12" class="robot-dark" />
+                      <rect x="410" y="178" width="40" height="10" rx="3" class="robot-dark" />
+                      <rect x="399" y="186" width="6" height="34" rx="2" class="robot-dark" />
+                      <rect x="455" y="186" width="6" height="34" rx="2" class="robot-dark" />
+                      <circle cx="430" cy="160" r="5" class="robot-joint" />
+                      <g class="carried-box">
+                        <rect x="405" y="200" width="50" height="36" rx="3" class="box" />
+                        <rect x="427" y="200" width="6" height="36" class="box-tape" />
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+              <figcaption class="robot-caption">Palletizing cycle · illustration</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- Focus areas -->
+      <section class="section">
+        <div class="container">
+          <p class="eyebrow">What I work on</p>
+          <h2>Four layers of one plant.</h2>
+          <p class="section-lead">
+            Automation is a chain: the controller, the robot, the communication
+            between them and the software operators use. My daily work touches
+            each layer.
+          </p>
+
+          <div class="focus-grid">
+            <div class="focus-card reveal">
+              <i class="fa-solid fa-microchip"></i>
+              <h3>PLC programming</h3>
+              <p>Structured Text on the Schneider platform; inverter parameters loaded with SoMove.</p>
+            </div>
+            <div class="focus-card reveal">
+              <i class="fa-solid fa-robot"></i>
+              <h3>Robotics</h3>
+              <p>A palletizing cell with a Doosan robotic arm and Fanuc robot integration.</p>
+            </div>
+            <div class="focus-card reveal">
+              <i class="fa-solid fa-network-wired"></i>
+              <h3>OPC UA</h3>
+              <p>Communication between robots and the rest of the system over OPC UA.</p>
+            </div>
+            <div class="focus-card reveal">
+              <i class="fa-solid fa-display"></i>
+              <h3>Industrial software</h3>
+              <p>Desktop applications in Python with PySide6 (Qt) for industrial use.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Robotics + OPC UA -->
+      <section id="robotics" class="section grid-bg on-dark">
+        <div class="container split">
+          <div>
+            <p class="eyebrow">Robotics</p>
+            <h2>Robots that talk to the plant.</h2>
+            <p>
+              On one project I work with a Doosan robotic arm on a
+              palletizing application. On another I integrate Fanuc robots with
+              the rest of the system over OPC UA, the open standard for
+              industrial communication.
+            </p>
+            <ul class="check-list">
+              <li><i class="fa-solid fa-check"></i> Palletizing with a Doosan robotic arm</li>
+              <li><i class="fa-solid fa-check"></i> Fanuc robot integration over OPC UA</li>
+              <li><i class="fa-solid fa-check"></i> Python on the software side of the robot cell</li>
+            </ul>
+          </div>
+
+          <div class="diagram reveal">
+            <svg viewBox="0 0 560 330" role="img" aria-labelledby="diagram-title">
+              <title id="diagram-title">
+                Diagram: PLC, robot, Python application and inverters exchanging
+                data through an OPC UA hub
+              </title>
+
+              <!-- Links -->
+              <path id="l1" class="link" d="M190 90 L238 140" />
+              <path id="l2" class="link" d="M370 90 L322 140" />
+              <path id="l3" class="link" d="M190 240 L238 190" />
+              <path id="l4" class="link" d="M370 240 L322 190" />
+              <path class="packet" d="M190 90 L238 140" />
+              <path class="packet reverse" d="M370 90 L322 140" />
+              <path class="packet" d="M190 240 L238 190" />
+              <path class="packet reverse" d="M370 240 L322 190" />
+
+              <!-- Hub -->
+              <circle cx="280" cy="165" r="54" class="node-hub" opacity="0.18" />
+              <circle cx="280" cy="165" r="42" class="node-hub" />
+              <text x="280" y="170" text-anchor="middle" class="hub-title">OPC UA</text>
+
+              <!-- Nodes -->
+              <rect x="20" y="40" width="170" height="64" rx="12" class="node-box" />
+              <text x="38" y="68" class="node-title">PLC</text>
+              <text x="38" y="88" class="node-sub">Schneider · Structured Text</text>
+
+              <rect x="370" y="40" width="170" height="64" rx="12" class="node-box" />
+              <text x="388" y="68" class="node-title">Robot</text>
+              <text x="388" y="88" class="node-sub">Fanuc · Doosan</text>
+
+              <rect x="20" y="226" width="170" height="64" rx="12" class="node-box" />
+              <text x="38" y="254" class="node-title">Python app</text>
+              <text x="38" y="274" class="node-sub">PySide6 (Qt)</text>
+
+              <rect x="370" y="226" width="170" height="64" rx="12" class="node-box" />
+              <text x="388" y="254" class="node-title">Drives</text>
+              <text x="388" y="274" class="node-sub">Inverters · SoMove</text>
+            </svg>
+            <span class="illustrative">Illustrative architecture</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- PLC -->
+      <section id="plc" class="section">
+        <div class="container split reverse">
+          <div>
+            <p class="eyebrow">PLC programming</p>
+            <h2>Structured Text, state by state.</h2>
+            <p>
+              I program PLC logic in Structured Text (IEC 61131-3) on the
+              Schneider platform. Machine sequences are easier to read, test and
+              commission when they are written as clear state machines.
+            </p>
+            <ul class="check-list">
+              <li><i class="fa-solid fa-check"></i> Structured Text on Schneider PLCs</li>
+              <li><i class="fa-solid fa-check"></i> Inverter parameter loading with SoMove</li>
+              <li><i class="fa-solid fa-check"></i> HMI with Vijeo Designer</li>
+            </ul>
+          </div>
+
+          <div class="reveal">
+            <div class="code-window">
+              <div class="window-bar">
+                <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                <span class="title">Palletizer.st</span>
+              </div>
+<pre><code><span class="st-kw">CASE</span> State <span class="st-kw">OF</span>
+  <span class="st-num">0</span>:  <span class="st-com">(* Idle: wait for start and safety *)</span>
+      <span class="st-kw">IF</span> StartCmd <span class="st-kw">AND</span> SafetyOk <span class="st-kw">THEN</span> State := <span class="st-num">10</span>; <span class="st-kw">END_IF</span>
+
+  <span class="st-num">10</span>: <span class="st-com">(* Box on conveyor: request a pick *)</span>
+      <span class="st-kw">IF</span> BoxPresent <span class="st-kw">THEN</span>
+          RobotPickReq := <span class="st-kw">TRUE</span>;
+          State := <span class="st-num">20</span>;
+      <span class="st-kw">END_IF</span>
+
+  <span class="st-num">20</span>: <span class="st-com">(* Robot cycle running *)</span>
+      <span class="st-kw">IF</span> RobotDone <span class="st-kw">THEN</span>
+          RobotPickReq := <span class="st-kw">FALSE</span>;
+          BoxCount := BoxCount + <span class="st-num">1</span>;
+          State := <span class="st-num">30</span>;
+      <span class="st-kw">END_IF</span>
+
+  <span class="st-num">30</span>: <span class="st-com">(* Layer complete? *)</span>
+      <span class="st-kw">IF</span> BoxCount &gt;= BoxesPerPallet <span class="st-kw">THEN</span>
+          PalletFull := <span class="st-kw">TRUE</span>;
+          State := <span class="st-num">0</span>;
+      <span class="st-kw">ELSE</span>
+          State := <span class="st-num">10</span>;
+      <span class="st-kw">END_IF</span>
+<span class="st-kw">END_CASE</span></code></pre>
+            </div>
+            <span class="illustrative">Illustrative example · not client code</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Industrial software -->
+      <section id="software" class="section education">
+        <div class="container split">
+          <div>
+            <p class="eyebrow">Industrial software</p>
+            <h2>Python applications for the shop floor.</h2>
+            <p>
+              I develop industrial software in Python with PySide6, the official
+              Qt binding: desktop applications that give operators and
+              technicians a clear view of the process.
+            </p>
+            <ul class="check-list">
+              <li><i class="fa-solid fa-check"></i> Python and PySide6 (Qt) desktop applications</li>
+              <li><i class="fa-solid fa-check"></i> OPC UA communication with machines</li>
+            </ul>
+          </div>
+
+          <div class="reveal">
+            <div class="hmi">
+              <div class="window-bar">
+                <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                <span class="title">Cell monitor · PySide6</span>
+              </div>
+              <div class="hmi-body">
+                <div class="hmi-panel">
+                  <div class="hmi-label">Status</div>
+                  <div class="hmi-status"><span class="lamp"></span> Running</div>
+                </div>
+                <div class="hmi-panel">
+                  <div class="hmi-label">Boxes on pallet</div>
+                  <div class="hmi-value" id="box-counter">12</div>
+                </div>
+                <div class="hmi-panel hmi-chart" aria-hidden="true">
+                  <span></span><span></span><span></span><span></span><span></span><span></span>
+                  <span></span><span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <div class="hmi-buttons">
+                  <div class="hmi-btn">Start</div>
+                  <div class="hmi-btn ghost">Reset</div>
+                  <div class="hmi-btn stop">Stop</div>
+                </div>
+              </div>
+            </div>
+            <span class="illustrative">Illustrative mockup</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Commissioning -->
+      <section id="commissioning" class="section">
+        <div class="container">
+          <p class="eyebrow">On site</p>
+          <h2>Testing and commissioning.</h2>
+          <p class="section-lead">
+            Software is finished only when the plant runs. I take part in plant
+            testing and commissioning as a member of the automation project team.
+          </p>
+
+          <div class="steps">
+            <div class="step reveal">
+              <h3>I/O checks</h3>
+              <p>Signals between field devices and the PLC.</p>
+            </div>
+            <div class="step reveal">
+              <h3>Drives</h3>
+              <p>Inverter parameters loaded with SoMove.</p>
+            </div>
+            <div class="step reveal">
+              <h3>Robot cycles</h3>
+              <p>Robot movements tested step by step.</p>
+            </div>
+            <div class="step reveal">
+              <h3>Communication</h3>
+              <p>Data exchange over OPC UA.</p>
+            </div>
+            <div class="step reveal">
+              <h3>Plant tests</h3>
+              <p>The full sequence running on site.</p>
+            </div>
+          </div>
+
+          <div class="note" style="margin-top: 48px">
+            <i class="fa-solid fa-circle-info"></i>
+            <p>
+              Client projects are confidential, so the visuals on this page are
+              illustrations and not photos or code from real installations.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="section cta on-dark">
+        <div class="container cta-inner">
+          <div>
+            <p class="eyebrow">Contact</p>
+            <h2>Building an automation team? Let’s talk.</h2>
+            <p>
+              I am open to roles as Automation Software Engineer, Python
+              Developer, Robot Programmer and industrial software developer.
+            </p>
+          </div>
+          <div class="contact-list">
+            <a href="mailto:tebou.digital@gmail.com">
+              <i class="fa-solid fa-envelope"></i> tebou.digital@gmail.com
+            </a>
+            <a href="tel:+393517346623">
+              <i class="fa-solid fa-phone"></i> +39 351 734 6623
+            </a>
+            <a href="index.html">
+              <i class="fa-solid fa-arrow-left"></i> Back to portfolio
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-bottom" style="padding-top: 0">
+          © <span id="year">2026</span> Fabrice Ghislain Tebou · Automation
+          Software Engineer · Piacenza, Italy
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var header = document.getElementById("header");
+        var nav = document.getElementById("nav");
+        var menuBtn = document.getElementById("menu-btn");
+        var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+        function onScroll() {
+          header.classList.toggle("scrolled", window.scrollY > 40);
+        }
+        window.addEventListener("scroll", onScroll, { passive: true });
+        onScroll();
+
+        menuBtn.addEventListener("click", function () {
+          var open = nav.classList.toggle("open");
+          menuBtn.setAttribute("aria-expanded", String(open));
+        });
+        nav.addEventListener("click", function (event) {
+          if (event.target.tagName === "A") {
+            nav.classList.remove("open");
+            menuBtn.setAttribute("aria-expanded", "false");
+          }
+        });
+
+        // Reveal on scroll
+        if ("IntersectionObserver" in window) {
+          var revealObserver = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("visible");
+                  revealObserver.unobserve(entry.target);
+                }
+              });
+            },
+            { threshold: 0.12 }
+          );
+          document.querySelectorAll(".reveal").forEach(function (element) {
+            revealObserver.observe(element);
+          });
+        } else {
+          document.querySelectorAll(".reveal").forEach(function (element) {
+            element.classList.add("visible");
+          });
+        }
+
+        // HMI mockup: box counter follows the robot cycle (one box every 6 s)
+        var counter = document.getElementById("box-counter");
+        var boxes = 12;
+        if (!reduceMotion) {
+          setInterval(function () {
+            boxes = boxes >= 24 ? 1 : boxes + 1;
+            counter.textContent = boxes;
+          }, 6000);
+        }
+
+        // Animated signal network behind the hero
+        var canvas = document.getElementById("signal-canvas");
+        var ctx = canvas.getContext("2d");
+        var styles = getComputedStyle(document.documentElement);
+        var accent = styles.getPropertyValue("--accent").trim() || "#f5a524";
+        var nodes = [];
+        var width = 0;
+        var height = 0;
+
+        function resize() {
+          var ratio = window.devicePixelRatio || 1;
+          width = canvas.offsetWidth;
+          height = canvas.offsetHeight;
+          canvas.width = width * ratio;
+          canvas.height = height * ratio;
+          ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+
+          var count = Math.round(Math.min(70, (width * height) / 16000));
+          nodes = [];
+          for (var i = 0; i < count; i++) {
+            nodes.push({
+              x: Math.random() * width,
+              y: Math.random() * height,
+              vx: (Math.random() - 0.5) * 0.35,
+              vy: (Math.random() - 0.5) * 0.35,
+              pulse: Math.random() * Math.PI * 2
+            });
+          }
+        }
+
+        function draw() {
+          ctx.clearRect(0, 0, width, height);
+          var maxDist = 140;
+
+          for (var i = 0; i < nodes.length; i++) {
+            var a = nodes[i];
+            for (var j = i + 1; j < nodes.length; j++) {
+              var b = nodes[j];
+              var dx = a.x - b.x;
+              var dy = a.y - b.y;
+              var dist = Math.sqrt(dx * dx + dy * dy);
+              if (dist < maxDist) {
+                ctx.strokeStyle = "rgba(255, 255, 255, " + (0.12 * (1 - dist / maxDist)) + ")";
+                ctx.lineWidth = 1;
+                ctx.beginPath();
+                ctx.moveTo(a.x, a.y);
+                ctx.lineTo(b.x, b.y);
+                ctx.stroke();
+              }
+            }
+          }
+
+          nodes.forEach(function (node) {
+            var glow = 0.5 + 0.5 * Math.sin(node.pulse);
+            ctx.globalAlpha = 0.35 + 0.5 * glow;
+            ctx.fillStyle = accent;
+            ctx.beginPath();
+            ctx.arc(node.x, node.y, 1.6 + glow, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.globalAlpha = 1;
+          });
+        }
+
+        function step() {
+          nodes.forEach(function (node) {
+            node.x += node.vx;
+            node.y += node.vy;
+            node.pulse += 0.03;
+            if (node.x < 0 || node.x > width) node.vx *= -1;
+            if (node.y < 0 || node.y > height) node.vy *= -1;
+          });
+          draw();
+          requestAnimationFrame(step);
+        }
+
+        resize();
+        window.addEventListener("resize", resize);
+        if (reduceMotion) {
+          draw();
+        } else {
+          requestAnimationFrame(step);
+        }
+      })();
+    </script>
+  </body>
+</html>
