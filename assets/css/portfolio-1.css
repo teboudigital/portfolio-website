@@ -292,7 +292,7 @@ p {
 }
 
 /* Medium screens: the long message would collide with the navigation */
-@media (max-width: 1180px) {
+@media (max-width: 1080px) {
   .status-long {
     display: none;
   }
