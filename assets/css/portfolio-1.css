@@ -296,7 +296,7 @@ p {
   grid-template-columns: 1.1fr 0.9fr;
   gap: 64px;
   align-items: center;
-  padding: 170px 24px 0;
+  padding: 170px 24px 110px;
 }
 
 .hero-lead {
@@ -316,19 +316,20 @@ p {
 }
 
 .hero-photo {
-  align-self: end;
-  border-radius: var(--radius) var(--radius) 0 0;
+  justify-self: center;
+  width: 300px;
+  aspect-ratio: 1;
+  border-radius: 50%;
   overflow: hidden;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.02));
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  border-bottom: 0;
-  max-width: 440px;
-  justify-self: end;
+  border: 6px solid rgba(255, 255, 255, 0.9);
+  box-shadow:
+    0 0 0 14px rgba(111, 216, 184, 0.14),
+    0 24px 60px rgba(0, 0, 0, 0.35);
 }
 
 .hero-photo img {
   width: 100%;
-  aspect-ratio: 4 / 5;
+  height: 100%;
   object-fit: cover;
   object-position: top;
 }
@@ -800,8 +801,8 @@ a.side-card:hover {
   }
 
   .hero-photo {
-    justify-self: center;
-    max-width: 340px;
+    width: 220px;
+    order: -1;
   }
 
   .stats-grid {
