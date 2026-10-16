@@ -33,6 +33,7 @@ All colors live in the palette block below.
 
   --radius: 18px;
   --container: 1120px;
+  --bar-h: 56px;
 }
 
 *,
@@ -250,13 +251,14 @@ p {
 .brand-status {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  padding: 6px 14px 6px 12px;
+  gap: 12px;
+  height: var(--bar-h);
+  padding: 0 22px 0 20px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
   font-family: var(--mono);
-  font-size: 0.74rem;
+  font-size: 0.8rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.86);
@@ -292,7 +294,9 @@ p {
 
 .pill-nav {
   display: flex;
+  align-items: center;
   gap: 6px;
+  height: var(--bar-h);
   padding: 6px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.08);
@@ -870,6 +874,8 @@ a.side-card:hover {
   .pill-nav.open {
     display: flex;
     flex-direction: column;
+    align-items: stretch;
+    height: auto;
     position: absolute;
     top: 100%;
     left: 24px;
@@ -953,7 +959,9 @@ a.side-card:hover {
   }
 
   .brand-status {
-    padding: 6px 12px 6px 10px;
+    height: 44px;
+    padding: 0 14px 0 12px;
+    gap: 10px;
     font-size: 0.66rem;
     letter-spacing: 0.08em;
   }
