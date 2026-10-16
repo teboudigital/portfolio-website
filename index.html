@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="it">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -25,7 +25,7 @@
       type="image/png"
     />
     <link rel="manifest" href="manifest.json" />
-    <meta name="theme-color" content="#3b82f6" />
+    <meta name="theme-color" content="#0a3d33" />
 
     <!-- External Libraries -->
     <link
@@ -35,575 +35,570 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,600&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap"
       rel="stylesheet"
     />
 
     <!-- CSS Files -->
-    <link rel="stylesheet" href="assets/css/variables.css" />
-    <link rel="stylesheet" href="assets/css/reset.css" />
-    <link rel="stylesheet" href="assets/css/layout.css" />
-    <link rel="stylesheet" href="assets/css/typography.css" />
-    <link rel="stylesheet" href="assets/css/animations.css" />
-    <link rel="stylesheet" href="assets/css/components/buttons.css" />
-    <link rel="stylesheet" href="assets/css/components/header.css" />
-    <link rel="stylesheet" href="assets/css/components/hero.css" />
-    <link rel="stylesheet" href="assets/css/components/about.css" />
-    <link rel="stylesheet" href="assets/css/components/skills.css" />
-    <link rel="stylesheet" href="assets/css/components/education.css" />
-    <link rel="stylesheet" href="assets/css/components/projects.css" />
-    <link rel="stylesheet" href="assets/css/components/contact.css" />
-    <link rel="stylesheet" href="assets/css/components/footer.css" />
-    <link rel="stylesheet" href="assets/css/components/loading.css" />
-    <link rel="stylesheet" href="assets/css/components/forms.css" />
-    <link rel="stylesheet" href="assets/css/utilities.css" />
-    <link rel="stylesheet" href="assets/css/responsive.css" />
-    <link rel="stylesheet" href="assets/css/dark-theme.css" />
+    <link rel="stylesheet" href="assets/css/portfolio-1.css" />
   </head>
   <body>
-    <!-- Loading Screen -->
-    <div class="loading-screen" id="loading-screen">
-      <div class="loading-content">
-        <div class="loading-logo">
-          <div class="loading-logo-icon">FG</div>
-          <h1 class="loading-logo-text">Fabrice Ghislain</h1>
-          <p class="loading-tagline">
-            Automation Software Engineer | Python Developer
-          </p>
-        </div>
-
-        <div class="loading-spinner">
-          <div class="spinner-ring"></div>
-          <div class="spinner-ring"></div>
-          <div class="spinner-ring"></div>
-        </div>
-
-        <div class="loading-text">Loading in progress</div>
-
-        <div class="loading-progress">
-          <div class="loading-progress-bar"></div>
-        </div>
-
-        <div class="loading-percentage" id="loading-percentage">0%</div>
-      </div>
-
-      <div class="loading-particles">
-        <div class="loading-particle"></div>
-        <div class="loading-particle"></div>
-        <div class="loading-particle"></div>
-        <div class="loading-particle"></div>
-        <div class="loading-particle"></div>
-        <div class="loading-particle"></div>
-        <div class="loading-particle"></div>
-        <div class="loading-particle"></div>
-      </div>
-
-      <span class="loading-sr-only"
-        >The portfolio is loading, please wait.</span
-      >
-    </div>
-
-    <!-- Scroll Progress Bar -->
-    <div id="scroll-progress" class="scroll-progress"></div>
-
     <!-- Header Navigation -->
-    <header id="header" class="header">
-      <nav class="nav">
-        <div class="nav-container">
-          <!-- Logo -->
-          <div class="nav-logo">
-            <a href="#home" class="logo-link">
-              <span class="logo-text">Fabrice Ghislain Tebou</span>
-              <span class="logo-subtitle"
-                >Automation Software Engineer | Python Developer</span
-              >
-            </a>
-          </div>
+    <header class="site-header" id="header">
+      <div class="container header-inner">
+        <a href="#home" class="brand" aria-label="Fabrice Ghislain Tebou, home">
+          <span class="brand-mark">FT</span>
+          <span class="brand-name">Fabrice Tebou</span>
+        </a>
 
-          <!-- Navigation Menu -->
-          <ul class="nav-menu" id="nav-menu">
-            <li class="nav-item">
-              <a href="#home" class="nav-link active">Home</a>
-            </li>
-            <li class="nav-item">
-              <a href="#about" class="nav-link">About Me</a>
-            </li>
-            <li class="nav-item">
-              <a href="#skills" class="nav-link">Skills</a>
-            </li>
-            <li class="nav-item">
-              <a href="#projects" class="nav-link">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a href="#certifications" class="nav-link">Certifications</a>
-            </li>
-            <li class="nav-item">
-              <a href="#contact" class="nav-link">Contact</a>
-            </li>
-          </ul>
+        <nav class="pill-nav" id="nav" aria-label="Main navigation">
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#education">Education</a>
+        </nav>
 
-          <!-- Navigation Controls -->
-          <div class="nav-controls">
-            <button
-              id="theme-toggle"
-              class="theme-toggle"
-              aria-label="Cambia tema"
-            >
-              <i class="fa-solid fa-moon"></i>
-            </button>
-            <button id="menu-toggle" class="menu-toggle" aria-label="Menu">
-              <span class="menu-line"></span>
-              <span class="menu-line"></span>
-              <span class="menu-line"></span>
-            </button>
-          </div>
-        </div>
-      </nav>
+        <a href="#contact" class="btn btn-light header-cta">Contact me</a>
+
+        <button
+          class="menu-btn"
+          id="menu-btn"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="nav"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
     </header>
 
-    <!-- Main Content -->
-    <main id="main">
-      <!-- Hero Section -->
-      <section id="home" class="hero">
-        <div class="hero-shapes">
-          <div class="hero-shape"></div>
-          <div class="hero-shape"></div>
-          <div class="hero-shape"></div>
-          <div class="hero-shape"></div>
-        </div>
-
-        <div class="container">
-          <div class="hero-content">
+    <main>
+      <!-- Hero -->
+      <section id="home" class="hero on-dark">
+        <div class="grid-bg">
+          <div class="container hero-inner">
             <div class="hero-text">
-              <p class="hero-greeting">Welcome, I’m</p>
-              <h2 class="hero-name">Fabrice Ghislain Tebou</h2>
-              <h2 class="hero-profession">
-                Automation Software Engineer | Python Developer
-              </h2>
-              <p class="hero-description">
-                Software Developer in industrial automation: PLC programming in
-                Structured Text, robotic cells with Doosan and Fanuc robots over
-                OPC UA, and industrial software in Python with PySide6 (Qt).
+              <p class="eyebrow">Automation Software Engineer / Python Developer</p>
+              <h1>Fabrice Ghislain Tebou</h1>
+              <p class="hero-lead">
+                Software for industrial automation: PLC programming, robotic
+                cells and industrial applications in Python.
               </p>
-              <div class="hero-buttons">
-                <a href="#projects" class="hero-btn hero-btn-primary">
-                  <span>View Projects</span>
-                  <i class="fa-solid fa-arrow-right"></i>
+              <p>
+                Software developer in industrial automation with a background in
+                Applied Physics. I program PLC systems in Structured Text on the
+                Schneider platform, commission inverters with SoMove, and work on
+                robotic cells with Doosan and Fanuc robots, including OPC UA
+                communication. I also build industrial software in Python with
+                PySide6 (Qt).
+              </p>
+              <div class="hero-actions">
+                <a href="#contact" class="btn btn-light">
+                  Get in touch <i class="fa-solid fa-arrow-right"></i>
                 </a>
-                <a href="#contact" class="hero-btn hero-btn-secondary">
-                  <span>Contact Me</span>
-                  <i class="fa-solid fa-envelope"></i>
-                </a>
+                <a href="#projects" class="btn btn-ghost">View projects</a>
               </div>
+              <p class="btn-note">Based in Piacenza, Italy</p>
             </div>
 
-            <div class="hero-image">
-              <div class="hero-avatar">
-                <img
-                  src="assets/images/home/cv_photo.png"
-                  alt="Fabrice Ghislain"
-                />
-              </div>
+            <div class="hero-photo">
+              <img
+                src="assets/images/home/cv_photo.png"
+                alt="Portrait of Fabrice Ghislain Tebou"
+              />
             </div>
           </div>
         </div>
-
-        <a href="#about" class="hero-scroll">
-          <span class="scroll-text">Scroll</span>
-          <div class="scroll-indicator"></div>
-        </a>
       </section>
 
-      <!-- About Section -->
-      <section id="about" class="about">
-        <div class="container">
-          <div class="section-header">
-            <h2 class="section-title">About Me</h2>
+      <!-- Key facts -->
+      <section class="stats" aria-label="Key facts">
+        <div class="container stats-grid">
+          <div>
+            <div class="stat-value">MSc</div>
+            <div class="stat-label">Applied Physics, University of Genoa</div>
           </div>
+          <div>
+            <div class="stat-value">600 h</div>
+            <div class="stat-label">Python developer training program</div>
+          </div>
+          <div>
+            <div class="stat-value">3</div>
+            <div class="stat-label">professional roles since 2025</div>
+          </div>
+          <div>
+            <div class="stat-value">4</div>
+            <div class="stat-label">languages spoken</div>
+          </div>
+        </div>
+      </section>
 
-          <div class="about-content">
-            <div class="about-text">
-              <div class="about-intro">
-                <p class="about-paragraph">
-                  Software developer in industrial automation. I program PLC
-                  systems in Structured Text on the Schneider platform,
-                  commission inverters with SoMove, and work on robotic cells
-                  with Doosan and Fanuc robots, including OPC UA communication.
-                  I also develop industrial software in Python with PySide6
-                  (Qt).
-                </p>
-                <p class="about-paragraph">
-                  I bring earlier experience in backend and enterprise software
-                  (Flask, Django, Delphi, relational databases) and in machine
-                  learning applications. I hold a Master’s degree in Applied
-                  Physics, which provides a strong analytical foundation for
-                  working with data, models, and complex systems.
-                </p>
+      <!-- Experience -->
+      <section id="experience" class="section">
+        <div class="container">
+          <p class="eyebrow">2025 — Today</p>
+          <h2>Career path.</h2>
+          <p class="section-lead">
+            From enterprise backend systems to the factory floor: my work now
+            sits where software meets machines, with PLCs, robots and industrial
+            communication.
+          </p>
+
+          <div class="timeline">
+            <article class="role-card featured reveal">
+              <div class="role-meta">
+                <h3>Provide Solution S.r.l.</h3>
+                <div class="role-dates">Jul 2026 — Present</div>
+                <div class="role-title">Software Developer, industrial automation</div>
+                <span class="badge">Current role</span>
               </div>
-
-              <!-- Languages -->
-              <div class="languages-section">
-                <h3 class="languages-title">Languages</h3>
-                <div class="language-skills">
-                  <div class="language-item">
-                    <span class="language-name">French</span>
-                    <span class="language-level">Native</span>
-                  </div>
-                  <div class="language-item">
-                    <span class="language-name">Italian</span>
-                    <span class="language-level">C1</span>
-                  </div>
-                  <div class="language-item">
-                    <span class="language-name">English</span>
-                    <span class="language-level">B1</span>
-                  </div>
-                  <div class="language-item">
-                    <span class="language-name">German</span>
-                    <span class="language-level">A1</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="about-visual">
-              <div class="about-image">
-                <img
-                  src="assets/images/about/about5.png"
-                  alt="Workspace di sviluppo"
-                  class="about-img"
-                />
-                <div class="about-overlay">
-                  <div class="overlay-content">
-                    <i class="fa-brands fa-python"></i>
-                    <div>
-                      <span>Building effective software solutions</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="soft-skills">
-                <h3 class="skills-title">Soft Skills</h3>
-                <ul class="skills-list">
-                  <li><i class="fa-solid fa-check"></i> Problem solving</li>
-                  <li><i class="fa-solid fa-check"></i> Fast learner</li>
-                  <li><i class="fa-solid fa-check"></i> Teamwork</li>
+              <div class="role-body">
+                <ul>
                   <li>
-                    <i class="fa-solid fa-check"></i> Effective communication
+                    Program PLC systems in Structured Text on the Schneider
+                    platform; load inverter parameters with SoMove.
+                  </li>
+                  <li>
+                    Work on a robotics project with a Doosan robotic arm for
+                    palletizing, and on robot integration with Fanuc robots over
+                    OPC UA.
+                  </li>
+                  <li>Develop industrial software in Python with PySide6 (Qt).</li>
+                  <li>
+                    Plant testing and commissioning as part of industrial
+                    automation project teams.
                   </li>
                 </ul>
               </div>
+            </article>
+
+            <article class="role-card reveal">
+              <div class="role-meta">
+                <h3>KONA srl</h3>
+                <div class="role-dates">Dec 2025 — May 2026</div>
+                <div class="role-title">Software Developer, enterprise backend</div>
+              </div>
+              <div class="role-body">
+                <ul>
+                  <li>
+                    Developed and maintained backend systems for enterprise
+                    administrative applications in a production environment.
+                  </li>
+                  <li>
+                    Implemented application logic and data workflows integrated
+                    with relational databases.
+                  </li>
+                  <li>
+                    Performed debugging, issue resolution, and system
+                    improvements.
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="role-card reveal">
+              <div class="role-meta">
+                <h3>Gruppo FOS</h3>
+                <div class="role-dates">Sep — Oct 2025</div>
+                <div class="role-title">Technical Programmer (internship)</div>
+              </div>
+              <div class="role-body">
+                <ul>
+                  <li>
+                    Contributed to application development using Java and
+                    JavaFX.
+                  </li>
+                  <li>
+                    Applied object-oriented programming concepts in
+                    collaborative development workflows.
+                  </li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="section projects grid-bg on-dark">
+        <div class="container">
+          <p class="eyebrow">Selected projects</p>
+          <h2>From data to deployed apps.</h2>
+          <p class="section-lead">
+            Personal projects in Python: machine learning on real sensor data and
+            backend applications with authentication and relational databases.
+          </p>
+
+          <div class="project-grid">
+            <article class="project-card reveal">
+              <h3>Air Quality Sensor Calibration</h3>
+              <p>
+                Multi-page Streamlit dashboard that calibrates low-cost gas
+                sensors against reference analyzer data. Regression models are
+                benchmarked with a chronological holdout and time-series
+                cross-validation, excluding reference data to prevent leakage.
+              </p>
+              <ul class="chips">
+                <li>Python</li>
+                <li>scikit-learn</li>
+                <li>pandas</li>
+                <li>Streamlit</li>
+                <li>Plotly</li>
+                <li>pytest</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://ml-air-quality-ayis.onrender.com/" target="_blank" rel="noopener">Live demo →</a>
+                <a href="https://github.com/teboudigital/ml-air-quality" target="_blank" rel="noopener">GitHub →</a>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <h3>PizzaMama Market</h3>
+              <p>
+                Modular Django REST Framework backend for an online pizzeria
+                (accounts, products, orders, analytics, audit) with JWT
+                authentication, role-based permissions, PostgreSQL and Docker.
+              </p>
+              <ul class="chips">
+                <li>Django</li>
+                <li>DRF</li>
+                <li>JWT</li>
+                <li>PostgreSQL</li>
+                <li>Docker</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://github.com/teboudigital/pizzamama-market" target="_blank" rel="noopener">GitHub →</a>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <h3>GDR Web App</h3>
+              <p>
+                Turn-based role-playing game built with Flask during a
+                collaborative training project: user authentication, character
+                creation, missions, combat and inventory, organized in Flask
+                Blueprints.
+              </p>
+              <ul class="chips">
+                <li>Flask</li>
+                <li>SQLAlchemy</li>
+                <li>Flask-Login</li>
+                <li>Bootstrap</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://gdr-web-app-crza.onrender.com/" target="_blank" rel="noopener">Live demo →</a>
+                <a href="https://github.com/teboudigital/gdr-web-app" target="_blank" rel="noopener">GitHub →</a>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <h3>Master’s thesis</h3>
+              <p>
+                Relationship analysis and dimensionality reduction in
+                heterogeneous datasets with machine learning techniques,
+                University of Genoa.
+              </p>
+              <ul class="chips">
+                <li>MATLAB</li>
+                <li>Random Forest</li>
+                <li>PCA</li>
+                <li>Statistics</li>
+              </ul>
+              <div class="project-links">
+                <a href="project_thesis.html">Read more →</a>
+              </div>
+            </article>
+          </div>
+
+          <a href="https://github.com/teboudigital" class="btn btn-light" target="_blank" rel="noopener">
+            <i class="fa-brands fa-github"></i> All projects on GitHub
+          </a>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills" class="section">
+        <div class="container">
+          <p class="eyebrow">Toolbox</p>
+          <h2>Technical skills.</h2>
+
+          <div class="skills-grid">
+            <div class="skill-card highlight reveal">
+              <div class="icon"><i class="fa-solid fa-industry"></i></div>
+              <h3>Industrial automation</h3>
+              <ul class="chips light-chips">
+                <li>PLC</li>
+                <li>Structured Text</li>
+                <li>Schneider</li>
+                <li>SoMove</li>
+                <li>Vijeo Designer (HMI)</li>
+                <li>Commissioning</li>
+              </ul>
+            </div>
+
+            <div class="skill-card highlight reveal">
+              <div class="icon"><i class="fa-solid fa-robot"></i></div>
+              <h3>Robotics</h3>
+              <ul class="chips light-chips">
+                <li>Doosan</li>
+                <li>Fanuc</li>
+                <li>OPC UA</li>
+                <li>Python for robotics</li>
+              </ul>
+            </div>
+
+            <div class="skill-card highlight reveal">
+              <div class="icon"><i class="fa-solid fa-display"></i></div>
+              <h3>Industrial software</h3>
+              <ul class="chips light-chips">
+                <li>Python</li>
+                <li>PySide6 (Qt)</li>
+                <li>OPC UA</li>
+              </ul>
+            </div>
+
+            <div class="skill-card reveal">
+              <div class="icon"><i class="fa-solid fa-server"></i></div>
+              <h3>Backend</h3>
+              <ul class="chips light-chips">
+                <li>Django</li>
+                <li>Flask</li>
+                <li>SQLAlchemy</li>
+                <li>REST APIs</li>
+                <li>MySQL</li>
+                <li>PostgreSQL</li>
+              </ul>
+            </div>
+
+            <div class="skill-card reveal">
+              <div class="icon"><i class="fa-solid fa-chart-line"></i></div>
+              <h3>Data &amp; machine learning</h3>
+              <ul class="chips light-chips">
+                <li>pandas</li>
+                <li>NumPy</li>
+                <li>scikit-learn</li>
+                <li>Feature engineering</li>
+                <li>Statistical modeling</li>
+              </ul>
+            </div>
+
+            <div class="skill-card reveal">
+              <div class="icon"><i class="fa-solid fa-code"></i></div>
+              <h3>Languages &amp; tools</h3>
+              <ul class="chips light-chips">
+                <li>C</li>
+                <li>C++</li>
+                <li>C#</li>
+                <li>Java</li>
+                <li>Delphi</li>
+                <li>MATLAB</li>
+                <li>R</li>
+                <li>Git</li>
+                <li>Linux</li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Skills Section -->
-      <section id="skills" class="skills">
-        <div class="container">
-          <div class="section-header">
-            <h2 class="section-title">Technical Skills</h2>
-          </div>
-
-          <div class="skills-filter">
-            <button class="filter-btn active" data-category="all">All</button>
-            <button class="filter-btn" data-category="automation">
-              Automation
-            </button>
-            <button class="filter-btn" data-category="development">
-              Development
-            </button>
-            <button class="filter-btn" data-category="data">Data</button>
-            <button class="filter-btn" data-category="tools">Tools</button>
-          </div>
-
-          <!-- Skills Grid - caricato dinamicamente da skills.json -->
-          <div class="skills-grid" id="skills-grid">
-            <!-- Le competenze verranno caricate da JavaScript -->
-          </div>
-        </div>
-      </section>
-
-      <!-- Education Section -->
-      <section id="certifications" class="education">
-        <div class="container">
-          <!-- Section Header -->
-          <div class="section-header">
-            <h2 class="section-title">Certifications</h2>
-            <p class="section-subtitle">
-              Professional training and industry-recognized credentials
+      <!-- Education -->
+      <section id="education" class="section education">
+        <div class="container edu-layout">
+          <div>
+            <p class="eyebrow">Education</p>
+            <h2>Physics first, then software.</h2>
+            <p>
+              A scientific background gives me the habit of measuring, testing
+              and understanding a system before changing it.
             </p>
+
+            <div class="edu-item reveal">
+              <h3>Master’s Degree in Applied Physics</h3>
+              <div class="role-dates">University of Genoa · Oct 2020 — Mar 2024</div>
+              <p>
+                Thesis on dimensionality reduction and heterogeneous dataset
+                analysis using machine learning techniques.
+              </p>
+            </div>
+
+            <div class="edu-item reveal">
+              <h3>Python Programmer and Developer</h3>
+              <div class="role-dates">Professional training program · Mar — Oct 2025</div>
+              <p>
+                600-hour program covering Python development, backend systems,
+                databases and AI concepts.
+              </p>
+            </div>
           </div>
 
-          <!-- Certifications Grid -->
-          <div class="certifications-grid">
-            <!-- Python Developer Certification -->
+          <aside class="side-cards" aria-label="Certifications and languages">
+            <p class="eyebrow">Certifications</p>
             <a
+              class="side-card"
               href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-51383e14-acce-4178-a129-96cd78e211ef.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              class="certification-link"
             >
-              <div class="certification-card">
-                <div class="certification-header">
-                  <div class="certification-icon">
-                    <i class="fa-brands fa-python"></i>
-                  </div>
-                  <div>
-                    <h4 class="certification-title">Python Developer</h4>
-                    <p class="certification-issuer">
-                      Udemy — Jonathan Roux | AI & Python
-                    </p>
-                  </div>
-                </div>
-                <div class="certification-date">Completed · August 2025</div>
-              </div>
+              <div class="stat-value">Python Developer</div>
+              <div class="stat-label">Udemy · Completed August 2025 · View certificate →</div>
             </a>
-
-            <!-- Programmer Technician Certification -->
-            <div class="certification-card">
-              <div class="certification-header">
-                <div class="certification-icon">
-                  <i class="fa-solid fa-industry"></i>
-                </div>
-                <div>
-                  <h4 class="certification-title">
-                    Programmer Technician (ISTAT Code 3.1.2.1.0)
-                  </h4>
-                  <p class="certification-issuer">
-                    Regione Liguria — FSE+ Program
-                  </p>
-                </div>
-              </div>
-              <div class="certification-date">Completed · October 2025</div>
+            <div class="side-card">
+              <div class="stat-value">Programmer Technician</div>
+              <div class="stat-label">Regione Liguria, FSE+ · Completed October 2025</div>
             </div>
-
-            <!-- Machine Learning Certification -->
-            <div class="certification-card">
-              <div class="certification-header">
-                <div class="certification-icon">
-                  <i class="fa-solid fa-brain"></i>
-                </div>
-                <div>
-                  <h4 class="certification-title">
-                    Machine Learning A–Z: AI, Python & R
-                  </h4>
-                  <p class="certification-issuer">
-                    Udemy — Data Science Experts
-                  </p>
-                </div>
+            <div class="side-card">
+              <div class="stat-value">Languages</div>
+              <div class="languages">
+                <span>French · Native</span>
+                <span>Italian · C1</span>
+                <span>English · B2</span>
+                <span>German · A1</span>
               </div>
-              <div class="certification-date">In Progress · 2025</div>
             </div>
-          </div>
+          </aside>
         </div>
       </section>
 
-      <!-- Projects Section -->
-      <section id="projects" class="projects">
-        <div class="container">
-          <div class="section-header">
-            <h2 class="section-title">My Projects</h2>
-          </div>
-
-          <div class="projects-filter">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="web">
-              Web Development
-            </button>
-            <button class="filter-btn" data-filter="python">Python</button>
-            <button class="filter-btn" data-filter="data">
-              Data Analysis & ML
-            </button>
-            <!--<button class="filter-btn" data-filter="iot">IoT</button>-->
-          </div>
-
-          <!-- Projects Grid - caricato dinamicamente da projects.json -->
-          <div class="projects-grid" id="projects-grid">
-            <!-- I progetti verranno caricati da JavaScript -->
-          </div>
-
-          <div class="github-section">
-            <h3>All Projects on GitHub</h3>
-            <p>Explore my complete collection of projects and contributions</p>
-            <a
-              href="https://github.com/teboudigital"
-              class="btn btn-primary"
-              target="_blank"
-              rel="noopener"
-            >
-              <i class="fa-brands fa-github"></i>
-              <span>Visit my GitHub</span>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- Contact Section -->
-      <section id="contact" class="contact">
-        <div class="container">
-          <div class="section-header">
-            <h2 class="section-title">Contact Me</h2>
-            <p class="section-subtitle">
-              Ready to collaborate on your next project
+      <!-- Contact -->
+      <section id="contact" class="section cta on-dark">
+        <div class="container cta-inner">
+          <div>
+            <p class="eyebrow">Contact</p>
+            <h2>Looking for an automation or Python developer? Let’s talk.</h2>
+            <p>
+              I am open to roles as Automation Software Engineer, Python
+              Developer, Robot Programmer and industrial software developer.
             </p>
           </div>
 
-          <div class="contact-content">
-            <div class="contact-info">
-              <div class="contact-item">
-                <div class="contact-icon">
-                  <i class="fa-solid fa-envelope"></i>
-                </div>
-                <div class="contact-details">
-                  <h3>Email</h3>
-                  <a
-                    href="https://mail.google.com/mail/?view=cm&fs=1&to=tebou.digital@gmail.com"
-                    target="_blank"
-                    rel="noopener"
-                    >tebou.digital@gmail.com</a
-                  >
-                </div>
-              </div>
-
-              <div class="contact-item">
-                <div class="contact-icon">
-                  <i class="fa-solid fa-phone"></i>
-                </div>
-                <div class="contact-details">
-                  <h3>Phone</h3>
-                  <a href="tel:+393517346623">+39 351 734 6623</a>
-                </div>
-              </div>
-
-              <div class="contact-item">
-                <div class="contact-icon">
-                  <i class="fa-solid fa-map-marker-alt"></i>
-                </div>
-                <div class="contact-details">
-                  <h3>Position</h3>
-                  <span>Piacenza, Italy</span>
-                </div>
-              </div>
-
-              <div class="contact-social">
-                <a
-                  href="https://github.com/teboudigital"
-                  class="social-link"
-                  target="_blank"
-                  rel="noopener"
-                  aria-label="GitHub"
-                >
-                  <i class="fa-brands fa-github"></i>
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/fabrice-ghislain-tebou-72000b211/"
-                  class="social-link"
-                  target="_blank"
-                  rel="noopener"
-                  aria-label="LinkedIn"
-                >
-                  <i class="fa-brands fa-linkedin"></i>
-                </a>
-                <a
-                  href="https://mail.google.com/mail/?view=cm&fs=1&to=tebou.digital@gmail.com"
-                  class="social-link"
-                  target="_blank"
-                  rel="noopener"
-                  aria-label="Email"
-                >
-                  <i class="fa-solid fa-envelope"></i>
-                </a>
-              </div>
-            </div>
-
-            <div class="contact-form-wrapper">
-              <form class="contact-form" id="contact-form">
-                <div class="form-group">
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    class="form-input"
-                    required
-                  />
-                  <label for="name" class="form-label">Name</label>
-                </div>
-
-                <div class="form-group">
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    class="form-input"
-                    required
-                  />
-                  <label for="email" class="form-label">Email</label>
-                </div>
-
-                <div class="form-group">
-                  <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    class="form-input"
-                    required
-                  />
-                  <label for="subject" class="form-label">Subject</label>
-                </div>
-
-                <div class="form-group">
-                  <textarea
-                    id="message"
-                    name="message"
-                    class="form-input"
-                    rows="5"
-                    required
-                  ></textarea>
-                  <label for="message" class="form-label">Message</label>
-                </div>
-
-                <button type="submit" class="btn btn-primary btn-full">
-                  <span>Send Message</span>
-                  <i class="fa-solid fa-paper-plane"></i>
-                </button>
-              </form>
-            </div>
+          <div class="contact-list">
+            <a href="mailto:tebou.digital@gmail.com">
+              <i class="fa-solid fa-envelope"></i> tebou.digital@gmail.com
+            </a>
+            <a href="tel:+393517346623">
+              <i class="fa-solid fa-phone"></i> +39 351 734 6623
+            </a>
+            <a href="https://www.linkedin.com/in/fabrice-ghislain-tebou-72000b211/" target="_blank" rel="noopener">
+              <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/teboudigital" target="_blank" rel="noopener">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
           </div>
         </div>
       </section>
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="site-footer">
       <div class="container">
-        <div class="footer-content">
-          <span class="footer-text"
-            >© 2026 Fabrice Ghislain Tebou - Automation Software Engineer |
-            Python Developer</span
-          >
+        <div class="footer-grid">
+          <div>
+            <span class="brand-mark">FT</span>
+            <p style="margin-top: 14px">
+              Fabrice Ghislain Tebou — Automation Software Engineer · Python
+              Developer
+            </p>
+          </div>
+          <div>
+            <h4>Contact</h4>
+            <ul>
+              <li><a href="mailto:tebou.digital@gmail.com">tebou.digital@gmail.com</a></li>
+              <li><a href="tel:+393517346623">+39 351 734 6623</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Profiles</h4>
+            <ul>
+              <li><a href="https://www.linkedin.com/in/fabrice-ghislain-tebou-72000b211/" target="_blank" rel="noopener">LinkedIn</a></li>
+              <li><a href="https://github.com/teboudigital" target="_blank" rel="noopener">GitHub</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Sections</h4>
+            <ul>
+              <li><a href="#experience">Experience</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#skills">Skills</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          © <span id="year">2026</span> Fabrice Ghislain Tebou · Piacenza, Italy
         </div>
       </div>
     </footer>
 
-    <button class="back-to-top" id="backToTop" aria-label="Torna su">
-      <i class="fa-solid fa-chevron-up"></i>
-    </button>
+    <script>
+      (function () {
+        var header = document.getElementById("header");
+        var nav = document.getElementById("nav");
+        var menuBtn = document.getElementById("menu-btn");
 
-    <!-- JavaScript Files -->
-    <script src="assets/js/config.js"></script>
-    <script src="assets/js/utils.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/modules/auto-counters.js"></script>
-    <script src="assets/js/modules/contact.js"></script>
-    <script src="assets/js/modules/counters.js"></script>
-    <script src="assets/js/modules/filters.js"></script>
-    <script src="assets/js/modules/hero.js"></script>
-    <script src="assets/js/modules/loading.js"></script>
-    <script src="assets/js/modules/navigation.js"></script>
-    <script src="assets/js/modules/projects.js"></script>
-    <script src="assets/js/modules/scroll.js"></script>
-    <script src="assets/js/modules/skills.js"></script>
-    <script src="assets/js/modules/theme.js"></script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+        function onScroll() {
+          header.classList.toggle("scrolled", window.scrollY > 40);
+        }
+        window.addEventListener("scroll", onScroll, { passive: true });
+        onScroll();
+
+        menuBtn.addEventListener("click", function () {
+          var open = nav.classList.toggle("open");
+          menuBtn.setAttribute("aria-expanded", String(open));
+        });
+        nav.addEventListener("click", function (event) {
+          if (event.target.tagName === "A") {
+            nav.classList.remove("open");
+            menuBtn.setAttribute("aria-expanded", "false");
+          }
+        });
+
+        // Highlight the nav link of the section in view
+        var links = nav.querySelectorAll("a");
+        var sections = Array.prototype.map.call(links, function (link) {
+          return document.querySelector(link.getAttribute("href"));
+        });
+
+        if ("IntersectionObserver" in window) {
+          var sectionObserver = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (entry) {
+                if (!entry.isIntersecting) return;
+                links.forEach(function (link) {
+                  link.classList.toggle(
+                    "active",
+                    link.getAttribute("href") === "#" + entry.target.id
+                  );
+                });
+              });
+            },
+            { rootMargin: "-45% 0px -50% 0px" }
+          );
+          sections.forEach(function (section) {
+            if (section) sectionObserver.observe(section);
+          });
+
+          var revealObserver = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("visible");
+                  revealObserver.unobserve(entry.target);
+                }
+              });
+            },
+            { threshold: 0.12 }
+          );
+          document.querySelectorAll(".reveal").forEach(function (element) {
+            revealObserver.observe(element);
+          });
+        } else {
+          document.querySelectorAll(".reveal").forEach(function (element) {
+            element.classList.add("visible");
+          });
+        }
+      })();
+    </script>
   </body>
 </html>
