@@ -13,8 +13,8 @@ workflow; the markup already shows the closed state as a fallback.
       short: "Open to work"
     },
     closed: {
-      long: "Automation Software Engineer @ Provide Solution",
-      short: "@ Provide Solution"
+      long: "Software Developer at Provide Solution Srl",
+      short: "at Provide Solution"
     }
   };
 
