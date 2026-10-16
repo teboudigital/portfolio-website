@@ -9,23 +9,23 @@ All colors live in the palette block below.
 
 :root {
   /* Palette */
-  --brand-ink: #04110e;
-  --brand-950: #062a23;
-  --brand-900: #0a3d33;
-  --brand-800: #0b4d40;
-  --brand-700: #0c5e4e;
-  --accent: #6fd8b8;
-  --accent-soft: #a8e9d4;
-  --accent-ink: #0c5e4e;
-  --accent-glow: rgba(111, 216, 184, 0.14);
-  --accent-glow-strong: rgba(111, 216, 184, 0.25);
-  --header-glass: rgba(6, 42, 35, 0.92);
-  --cream: #f8f6f1;
+  --brand-ink: #060f18;
+  --brand-950: #0b1a28;
+  --brand-900: #0f2233;
+  --brand-800: #163650;
+  --brand-700: #1f4e79;
+  --accent: #f5a524;
+  --accent-soft: #ffd28a;
+  --accent-ink: #1f4e79;
+  --accent-glow: rgba(245, 165, 36, 0.16);
+  --accent-glow-strong: rgba(245, 165, 36, 0.22);
+  --header-glass: rgba(11, 26, 40, 0.92);
+  --cream: #f4f6f9;
   --paper: #ffffff;
-  --ink: #1c1b18;
-  --ink-soft: #4a4842;
-  --line: #e6e2d9;
-  --footer: #1e1d1a;
+  --ink: #14202b;
+  --ink-soft: #46525e;
+  --line: #dfe4ea;
+  --footer: #0c141c;
 
   --serif: "Newsreader", Georgia, "Times New Roman", serif;
   --sans: "Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
