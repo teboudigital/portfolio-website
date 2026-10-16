@@ -2,17 +2,24 @@
 ===========================================
 PORTFOLIO-1 THEME
 ===========================================
-Editorial layout: deep green hero with grid, serif display headings,
-monospace eyebrows, cream content sections and glass project cards.
+Editorial layout: dark brand hero with grid, serif display headings,
+monospace eyebrows, light content sections and glass project cards.
+All colors live in the palette block below.
 */
 
 :root {
-  --green-950: #062a23;
-  --green-900: #0a3d33;
-  --green-800: #0b4d40;
-  --green-700: #0c5e4e;
-  --mint: #6fd8b8;
-  --mint-soft: #a8e9d4;
+  /* Palette */
+  --brand-ink: #04110e;
+  --brand-950: #062a23;
+  --brand-900: #0a3d33;
+  --brand-800: #0b4d40;
+  --brand-700: #0c5e4e;
+  --accent: #6fd8b8;
+  --accent-soft: #a8e9d4;
+  --accent-ink: #0c5e4e;
+  --accent-glow: rgba(111, 216, 184, 0.14);
+  --accent-glow-strong: rgba(111, 216, 184, 0.25);
+  --header-glass: rgba(6, 42, 35, 0.92);
   --cream: #f8f6f1;
   --paper: #ffffff;
   --ink: #1c1b18;
@@ -97,12 +104,12 @@ p {
   font-size: 0.78rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--green-700);
+  color: var(--accent-ink);
   margin: 0 0 14px;
 }
 
 .on-dark .eyebrow {
-  color: var(--mint-soft);
+  color: var(--accent-soft);
 }
 
 .on-dark,
@@ -128,7 +135,7 @@ p {
 /* Grid texture used on dark sections */
 .grid-bg {
   position: relative;
-  background-color: var(--green-800);
+  background-color: var(--brand-800);
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
@@ -163,12 +170,12 @@ p {
 }
 
 .btn-green {
-  background: var(--green-700);
+  background: var(--brand-700);
   color: #fff;
 }
 
 .btn-green:hover {
-  background: var(--green-800);
+  background: var(--brand-800);
 }
 
 .btn-ghost {
@@ -199,7 +206,7 @@ p {
 }
 
 .site-header.scrolled {
-  background: rgba(6, 42, 35, 0.92);
+  background: var(--header-glass);
   backdrop-filter: blur(10px);
   padding: 10px 0;
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
@@ -225,7 +232,7 @@ p {
   font-weight: 600;
   font-size: 1.9rem;
   line-height: 1;
-  color: var(--mint);
+  color: var(--accent);
 }
 
 .brand-name {
@@ -233,7 +240,7 @@ p {
   font-size: 0.82rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--mint);
+  color: var(--accent);
 }
 
 .pill-nav {
@@ -283,7 +290,7 @@ p {
 /* ================================ */
 
 .hero {
-  background: linear-gradient(160deg, var(--green-700) 0%, var(--green-900) 55%, var(--green-950) 100%);
+  background: linear-gradient(160deg, var(--brand-700) 0%, var(--brand-900) 55%, var(--brand-950) 100%);
   overflow: hidden;
 }
 
@@ -323,7 +330,7 @@ p {
   overflow: hidden;
   border: 6px solid rgba(255, 255, 255, 0.9);
   box-shadow:
-    0 0 0 14px rgba(111, 216, 184, 0.14),
+    0 0 0 14px var(--accent-glow),
     0 24px 60px rgba(0, 0, 0, 0.35);
 }
 
@@ -354,7 +361,7 @@ p {
   font-family: var(--serif);
   font-size: 2.3rem;
   line-height: 1.1;
-  color: var(--green-700);
+  color: var(--accent-ink);
 }
 
 .stat-label {
@@ -402,7 +409,7 @@ p {
 .role-title {
   font-size: 0.92rem;
   line-height: 1.5;
-  color: var(--green-700);
+  color: var(--accent-ink);
 }
 
 .role-body ul {
@@ -415,8 +422,8 @@ p {
 }
 
 .role-card.featured {
-  background: var(--green-700);
-  border-color: var(--green-700);
+  background: var(--brand-700);
+  border-color: var(--brand-700);
 }
 
 .role-card.featured h3,
@@ -433,7 +440,7 @@ p {
 }
 
 .role-card.featured .role-title {
-  color: var(--mint-soft);
+  color: var(--accent-soft);
 }
 
 .badge {
@@ -446,7 +453,7 @@ p {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   background: rgba(255, 255, 255, 0.14);
-  color: var(--mint-soft);
+  color: var(--accent-soft);
 }
 
 /* ================================ */
@@ -454,7 +461,7 @@ p {
 /* ================================ */
 
 .projects {
-  background-color: var(--green-700);
+  background-color: var(--brand-700);
 }
 
 .project-grid {
@@ -499,7 +506,7 @@ p {
   padding: 4px 10px;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.22);
-  color: var(--mint-soft);
+  color: var(--accent-soft);
 }
 
 .project-links {
@@ -510,7 +517,7 @@ p {
 .project-links a {
   font-weight: 600;
   font-size: 0.92rem;
-  color: var(--mint);
+  color: var(--accent);
   text-decoration: none;
 }
 
@@ -542,17 +549,17 @@ p {
 
 .skill-card .icon {
   font-size: 1.3rem;
-  color: var(--green-700);
+  color: var(--accent-ink);
   margin-bottom: 14px;
 }
 
 .skill-card.highlight {
-  border-color: var(--green-700);
-  box-shadow: inset 0 0 0 1px var(--green-700);
+  border-color: var(--brand-700);
+  box-shadow: inset 0 0 0 1px var(--brand-700);
 }
 
 .light-chips li {
-  color: var(--green-800);
+  color: var(--brand-800);
   border-color: var(--line);
   background: var(--cream);
 }
@@ -610,7 +617,7 @@ p {
 }
 
 a.side-card:hover {
-  border-color: var(--green-700);
+  border-color: var(--brand-700);
 }
 
 .side-card .stat-value {
@@ -631,7 +638,7 @@ a.side-card:hover {
 .languages span {
   font-family: var(--mono);
   font-size: 0.8rem;
-  color: var(--green-700);
+  color: var(--accent-ink);
 }
 
 /* ================================ */
@@ -640,8 +647,8 @@ a.side-card:hover {
 
 .cta {
   background:
-    radial-gradient(ellipse at 80% 30%, rgba(111, 216, 184, 0.25), transparent 55%),
-    linear-gradient(135deg, #04110e 0%, var(--green-950) 45%, var(--green-800) 100%);
+    radial-gradient(ellipse at 80% 30%, var(--accent-glow-strong), transparent 55%),
+    linear-gradient(135deg, var(--brand-ink) 0%, var(--brand-950) 45%, var(--brand-800) 100%);
 }
 
 .cta-inner {
@@ -675,7 +682,7 @@ a.side-card:hover {
 }
 
 .contact-list i {
-  color: var(--mint);
+  color: var(--accent);
   width: 20px;
   text-align: center;
 }
@@ -775,7 +782,7 @@ a.side-card:hover {
     left: 24px;
     right: 24px;
     border-radius: 16px;
-    background: var(--green-950);
+    background: var(--brand-950);
     padding: 12px;
   }
 
