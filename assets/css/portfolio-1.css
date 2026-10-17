@@ -274,15 +274,11 @@ p {
   width: 11px;
   height: 11px;
   border-radius: 50%;
-  background: var(--accent);
-}
-
-.brand-status.is-open .status-dot {
   background: #22c55e;
 }
 
-/* Only the "open" state pulses */
-.brand-status.is-open .status-dot::after {
+/* Same green pulsing dot in every state: only the message changes */
+.status-dot::after {
   content: "";
   position: absolute;
   inset: 0;
