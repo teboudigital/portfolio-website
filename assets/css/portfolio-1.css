@@ -639,6 +639,19 @@ p {
   text-decoration: underline;
 }
 
+.hosting-note {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: -16px 0 28px;
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.hosting-note i {
+  color: var(--accent);
+}
+
 /* ================================ */
 /* SKILLS                           */
 /* ================================ */
